@@ -8,14 +8,14 @@ find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
 include_directories(.)
 
 add_executable(minesweeper
-        Button.cpp
-        Button.h
-        GameState.cpp
-        GameState.h
-        Minesweeper.cpp
-        Minesweeper.h
-        Tile.cpp
-        Tile.h
-        Toolbox.cpp
-        Toolbox.h)
+        src/Button.cpp
+        src/Button.h
+        src/GameState.cpp
+        src/GameState.h
+        src/Minesweeper.cpp
+        src/Minesweeper.h
+        src/Tile.cpp
+        src/Tile.h
+        src/Toolbox.cpp
+        src/Toolbox.h)
 target_link_libraries(minesweeper sfml-graphics sfml-audio)
