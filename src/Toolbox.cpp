@@ -30,10 +30,10 @@ void Toolbox::loadSprite(const string& filename, const string& key, bool rect, i
     Texture* texture = new Texture();
     if(rect) {
         // Load sprite with a texture rectangle (sub-image)
-        texture->loadFromFile("./images/" + filename, IntRect(i * 21, 0, 21, tileHeight));
+        texture->loadFromFile("../resources/images/" + filename, IntRect(i * 21, 0, 21, tileHeight));
     } else {
         // Load sprite without texture rectangle
-        texture->loadFromFile("./images/" + filename);
+        texture->loadFromFile("../resources/images/" + filename);
     }
     allSprites[key] = new Sprite(*texture);
 }
@@ -280,7 +280,7 @@ function<void(void)> Toolbox::clickDebugMode() {
 function<void(void)> Toolbox::clickButton1() {
     return [this]() {
         delete gameState;
-        gameState = new GameState("./boards/testboard1.brd");
+        gameState = new GameState("../resources/boards/testboard1.brd");
         gameState->setPlayStatus(GameState::PLAYING);
         for(int i = 0; i < gameState->dimensions.x; i++) {
             for(int j = 0; j < gameState->dimensions.y; j++)
@@ -295,7 +295,7 @@ function<void(void)> Toolbox::clickButton1() {
 function<void(void)> Toolbox::clickButton2() {
     return [this]() {
         delete gameState;
-        gameState = new GameState("./boards/testboard2.brd");
+        gameState = new GameState("../resources/boards/testboard2.brd");
         gameState->setPlayStatus(GameState::PLAYING);
         for(int i = 0; i < gameState->dimensions.x; i++) {
             for(int j = 0; j < gameState->dimensions.y; j++)
@@ -310,7 +310,7 @@ function<void(void)> Toolbox::clickButton2() {
 function<void(void)> Toolbox::clickButton3() {
     return [this]() {
         delete gameState;
-        gameState = new GameState("./boards/testboard3.brd");
+        gameState = new GameState("../resources/boards/testboard3.brd");
         gameState->setPlayStatus(GameState::PLAYING);
         for(int i = 0; i < gameState->dimensions.x; i++) {
             for(int j = 0; j < gameState->dimensions.y; j++)
