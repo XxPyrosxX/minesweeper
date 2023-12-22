@@ -39,7 +39,7 @@ Pre-generated game boards can be loaded from board files (brd) stored as plain t
 
 ## Requirements
 
-    I iused SFML v2.5.1 for this project.
+    I used SFML v2.5.1 for this project.
     Construction of several classes and functions, with all attributes/methods private unless noted.
     Key classes include Toolbox, Button, Tile, and GameState.
 
